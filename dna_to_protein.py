@@ -60,7 +60,7 @@ def dna_to_codons(fasta):
 
 
 def main():
-    fasta = input("Introduce raw DNA sequence: \n")
+    fasta = input("Introduce DNA sequence: \n")
     fasta = fasta.replace(" ", "")
     codon_list = dna_to_codons(fasta)
     aa_seq = []
