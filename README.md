@@ -3,8 +3,8 @@ Tools for Bioinformatics
 
 # DNA TO PROTEIN
 USAGE:
-Introduce DNA sequence (i.e. ATGCGTGGTAATCATACTTAA).
-Spaces are allowed (i.e. ATGCGTGGT AATCATACTTAA).
+1. Introduce DNA sequence (i.e. ATGCGTGGTAATCATACTTAA).
+* Spaces are allowed (i.e. ATGCGTGGT AATCATACTTAA).
 
 
 # .fastq to .csv sequences file
