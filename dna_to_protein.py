@@ -2,7 +2,7 @@
 
 
 genetic_code = {"ATG": "M",
-                "GGT": "G", "GGC": "G","GGA": "G", "GGG": "G",
+                "GGT": "G", "GGC": "G", "GGA": "G", "GGG": "G",
                 "TCT": "S", "TCC": "S", "TCA": "S", "TCG": "S", "AGT": "S", "AGC": "S",
                 "CCT": "P", "CCC": "P", "CCA": "P", "CCG": "P",
                 "GCT": "A", "GCC": "A", "GCA": "A", "GCG": "A",
