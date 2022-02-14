@@ -1,49 +1,34 @@
 # Translate DNA - Protein
 
 
-def genetic_code(codon):
-    if codon == "ATG":
-        return "M"
-    elif codon == "GGT" or codon == "GGC" or codon == "GGA" or codon == "GGG":
-        return "G"
-    elif codon == "TCT" or codon == "TCC" or codon == "TCA" or codon == "TCG" or codon == "AGT" or codon == "AGC":
-        return "S"
-    elif codon == "CCT" or codon == "CCC" or codon == "CCA" or codon == "CCG":
-        return "P"
-    elif codon == "GCT" or codon == "GCC" or codon == "GCA" or codon == "GCG":
-        return "A"
-    elif codon == "ACT" or codon == "ACC" or codon == "ACA" or codon == "ACG":
-        return "T"
-    elif codon == "TAT" or codon == "TAC":
-        return "Y"
-    elif codon == "TTT" or codon == "TTC":
-        return "F"
-    elif codon == "TTA" or codon == "TTG" or codon == "CTT" or codon == "CTC" or codon == "CTA" or codon == "CTG":
-        return "L"
-    elif codon == "ATT" or codon == "ATC" or codon == "ATA":
-        return "I"
-    elif codon == "GTT" or codon == "GTC" or codon == "GTA" or codon == "GTG":
-        return "V"
-    elif codon == "CAT" or codon == "CAC":
-        return "H"
-    elif codon == "CAA" or codon == "CAG":
-        return "Q"
-    elif codon == "AAT" or codon == "AAC":
-        return "N"
-    elif codon == "AAA" or codon == "AAG":
-        return "K"
-    elif codon == "GAT" or codon == "GAC":
-        return "D"
-    elif codon == "GAA" or codon == "GAG":
-        return "E"
-    elif codon == "TGT" or codon == "TGC":
-        return "C"
-    elif codon == "TGG":
-        return "W"
-    elif codon == "CGT" or codon == "CGC" or codon == "CGA" or codon == "CGG" or codon == "AGA" or codon == "AGG":
-        return "R"
-    elif codon == "TAA" or codon == "TAG" or codon == "TGA":
-        return "-"
+genetic_code = {"ATG": "M",
+                "GGT": "G", "GGC": "G","GGA": "G", "GGG": "G",
+                "TCT": "S", "TCC": "S", "TCA": "S", "TCG": "S", "AGT": "S", "AGC": "S",
+                "CCT": "P", "CCC": "P", "CCA": "P", "CCG": "P",
+                "GCT": "A", "GCC": "A", "GCA": "A", "GCG": "A",
+                "ACT": "T", "ACC": "T", "ACA": "T", "ACG": "T",
+                "TAT": "Y", "TAC": "Y",
+                "TTT": "F", "TTC": "F",
+                "TTA": "L", "TTG": "L", "CTT": "L", "CTC": "L", "CTA": "L", "CTG": "L",
+                "ATT": "I", "ATC": "I", "ATA": "I",
+                "GTT": "V", "GTC": "V", "GTA": "V", "GTG": "V",
+                "CAT": "H", "CAC": "H",
+                "CAA": "Q", "CAG": "Q",
+                "AAT": "N", "AAC": "N",
+                "AAA": "K", "AAG": "K",
+                "GAT": "D", "GAC": "D",
+                "GAA": "E", "GAG": "E",
+                "TGT": "C", "TGC": "C",
+                "TGG": "W",
+                "CGT": "R", "CGC": "R", "CGA": "R", "CGG": "R", "AGA": "R", "AGG": "R",
+                "TAA": "-", "TAG": "-", "TGA": "-"}
+
+
+def translation(codon):
+    if codon in genetic_code:
+        return genetic_code[codon]
+    else:
+        print("something is not working")
     return
 
 
@@ -65,8 +50,8 @@ def main():
     codon_list = dna_to_codons(fasta)
     aa_seq = []
     for i in codon_list:
-        aa_seq.append(genetic_code(i))
-    aa_seq = "".join(aa_seq)    
+        aa_seq.append(translation(i))
+    aa_seq = "".join(aa_seq)
     print("\n" + aa_seq)
     return
 
