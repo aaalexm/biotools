@@ -6,7 +6,7 @@ def genetic_code(codon):
         return "M"
     elif codon == "GGT" or codon == "GGC" or codon == "GGA" or codon == "GGG":
         return "G"
-    elif codon == "TCT" or codon == "TCC" or codon == "TCA" or codon == "TCG" or codon == "AGT" or codon == "AGG" or codon == "AGC":
+    elif codon == "TCT" or codon == "TCC" or codon == "TCA" or codon == "TCG" or codon == "AGT" or codon == "AGC":
         return "S"
     elif codon == "CCT" or codon == "CCC" or codon == "CCA" or codon == "CCG":
         return "P"
